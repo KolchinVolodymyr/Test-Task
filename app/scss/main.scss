@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+$white: #fff;
+$darkblue: #0D47A1;
+$lightblue: #80D6FF;
+
+
+@mixin container () {
+  width: 1320px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  font-family: 'Rokkitt', serif;
+}
+
+  /*Header*/
+  .header {
+    height: 100px;
+    position: relative;
+    .container {
+      @include container();
+      position: relative;
+      overflow: hidden;
+      p {
+        z-index: 99;
+        position: absolute;
+        line-height: 44px;
+        font-size: 50px;
+        margin-top: 15px;
+        margin-left: 20px;
+        color: rgba(255, 255, 255, 0.4);
+      }
+      img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+      }
+      .header__wrap::after {
+        content: '';
+        width: 102%;
+        border: 1px solid $white;
+        height: 50px;
+        background: #0086C3;
+        position: absolute;
+        bottom: -35px;
+        left: -5px;
+        transform: rotate(-1.3deg);
+      }
+    }
+  }
+  .header::after {
+    content: 'Lorem ipsum dolor sit amet.';
+    position: fixed;
+    left: 20px;
+    top: 120px;
+    background: #C1A2FF;
+    width: 200px;
+    height: 20px;
+    z-index: 5;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    transform: rotate(90deg);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    text-align: center;
+  }
+
+  /*Navigation*/
+  .navigator {
+    height: 40px;
+    .container {
+      @include container ();
+      position: relative;
+      overflow: hidden;
+      background: #0086C3;
+    }
+  }
+
+  /*Content*/
+  .content {
+    .container {
+      @include container ();
+      background: #0086C3;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      nav {
+        display: flex;
+        width: 100%;
+        padding-left: 24%;
+        height: 40px;
+      }
+      ul {
+        margin: 0px;
+        padding-top: 10px;
+        display: flex;
+        list-style-type: none;
+        li {
+          height: 20px;
+          width: 51px;
+          background: $darkblue;
+          color: $white;
+          border-radius: 2px;
+          margin-right: 17px;
+          text-align: center;
+        }
+        li:hover {
+          color: $lightblue;
+          cursor: pointer;
+        }
+      }
+      aside {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+        background: #29B6F6;
+        position: relative;
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          color: $darkblue;
+          margin-top: 112px;
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-bottom: 26px;
+        }
+        .list {
+          ol {
+            list-style-type: none; /* Removing the original markers  */
+            counter-reset: my-counter; /* Set the name of the counter  */
+            padding-left: 16px;
+          }
+          li {
+            margin-bottom: 16px;
+            display: flex;
+            font-size: 16px;
+            color: $white;
+          }
+          li::before {
+            content: counter(my-counter); /* Displaying the number  */
+            counter-increment: my-counter; /* Increasing the counter value  */
+            background: $darkblue;
+            color: $white;
+            border: 1px solid $darkblue;
+            border-radius: 2px;
+            justify-content: flex-start;
+            text-align: center;
+            font-size: 12px;
+            line-height: 16px;
+            width: 16px;
+            height: 16px;
+            margin-right: 7px;
+          }
+        }
+      }
+
+      aside::before {
+        content: '';
+        width: 150px;
+        height: 150px;
+        border: 1px solid #166285;
+        border-radius: 50%;
+        margin-top: -75px;
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background: $lightblue;
+      }
+      .table::after {
+        content: '';
+        bottom: -21px;
+        width: 101%;
+        height: 40px;
+        background: $white;
+        position: absolute;
+        transform: rotate(-2.2deg);
+      }
+      .table {
+        width: 75%;
+        position: relative;
+        padding-bottom: 45px;
+        background: $lightblue;
+        table {
+          width: 96%;
+          margin: 20px 30px 20px 20px;
+          border-collapse: collapse;
+          tr, td {
+            font-family: 'Inter', sans-serif;
+            border: 1px solid #D1CFD7;
+            padding-left: 8px;
+            padding-right: 8px;
+            font-size: 15px;
+            line-height: 20px;
+          }
+          td:last-child {
+            text-align: right;
+          }
+          td:nth-child(2) {
+            font-size: 13px;
+            line-height: 18px;
+          }
+          tr {
+            height: 40px;
+            background: $white;
+          }
+          thead {
+            tr, td {
+              font-size: 13px;
+              line-height: 18px;
+            }
+            tr {
+              background: #F7F7FA;
+            }
+            td:last-child {
+              text-align: center;
+            }
+          }
+        }
+        button {
+          width: 150px;
+          height: 35px;
+          line-height: 32px;
+          border-radius: 5px;
+          border: 1px solid $darkblue;
+          background: $darkblue;
+          color: $white;
+          display: flex;
+          justify-content: center;
+          margin: 0 auto;
+        }
+        button:hover {
+          color: $lightblue;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  /*Columns*/
+  .columns {
+    height: 270px;
+    color: $darkblue;
+    margin-top: 100px;
+    margin-bottom: 102px;
+    .container {
+      @include container ();
+      display: flex;
+      justify-content: space-between;
+      .column-1 {
+        width: 33%;
+        background: $lightblue;
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+      .column-2 {
+        width: 33%;
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+      .column-3 {
+        width: 33%;
+        background: $lightblue;
+        display: flex;
+        justify-content: center;
+        align-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        p {
+          font-size: 16px;
+          line-height: 22px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+
+  /*Footer*/
+  .footer {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    .container {
+      @include container ();
+      display: flex;
+      justify-content: space-between;
+      div {
+        z-index: 1;
+      }
+      .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background: $lightblue;
+        width: 310px;
+        height: 90px;
+        font-size: 50px;
+        color: rgba(0, 0, 0, 0.35);
+      }
+    }
+    .wrap::before {
+      content: '';
+      width: 310px;
+      height: 98px;
+      background: rgb(193, 162, 255);
+      position: absolute;
+      transform: rotate(-15deg);
+      transform-origin: 102% 70% 0px;
+    }
+  }
+
+

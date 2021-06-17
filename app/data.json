@@ -1,0 +1,13 @@
+[
+  { "Ticker": "AKAM", "name": "Akamai Technologies", "SCTR": "93.9" },
+  { "Ticker": "MU", "name": "Micron", "SCTR": "40.1" },
+  { "Ticker": "FHN", "name": "First Horizon", "SCTR": "66.4" },
+  { "Ticker": "LSI", "name": "LSI", "SCTR": "47.6" },
+  { "Ticker": "ALTR", "name": "Altera", "SCTR": "39.9" },
+  { "Ticker": "ATI", "name": "Allegheny", "SCTR": "33.0" },
+  { "Ticker": "MUS", "name": "MUSA Corporation", "SCTR": "95.9" },
+  { "Ticker": "FHN", "name": "First Horizon", "SCTR": "85.0" },
+  { "Ticker": "FHN", "name": "Huntington Banschare", "SCTR": "69.0" },
+  { "Ticker": "ALTO", "name": "Altolandia", "SCTR": "44.1" },
+  { "Ticker": "JOPA", "name": "Jopa Telecom", "SCTR": "44.1" }
+]
